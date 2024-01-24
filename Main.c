@@ -1,5 +1,34 @@
-#include<stdio.h>
-int main(){
-    printf("welcome to c program ");
+#include <stdio.h>
+
+int main() {
+    char grade = 'B';
+
+    switch (grade) {
+        case 'A':
+        case 'B':
+            if (grade == 'A') {
+                printf("Excellent!\n");
+            } else {
+                printf("Good!\n");
+            }
+            break;
+        
+        case 'C':
+            printf("Average\n");
+            break;
+
+        case 'D':
+        case 'F':
+            if (grade == 'F') {
+                printf("Fail\n");
+            } else {
+                printf("Needs improvement\n");
+            }
+            break;
+
+        default:
+            printf("Invalid grade\n");
+    }
+
     return 0;
 }
