@@ -1,34 +1,29 @@
 #include <stdio.h>
 
-int main() {
-    char grade = 'B';
+int addNumbers(int x, int y) {
+    // Code smell: Non-descriptive variable names
+    int a = x;
+    int b = y;
 
-    switch (grade) {
-        case 'A':
-        case 'B':
-            if (grade == 'A') {
-                printf("Excellent!\n");
-            } else {
-                printf("Good!\n");
-            }
-            break;
-        
-        case 'C':
-            printf("Average\n");
-            break;
-
-        case 'D':
-        case 'F':
-            if (grade == 'F') {
-                printf("Fail\n");
-            } else {
-                printf("Needs improvement\n");
-            }
-            break;
-
-        default:
-            printf("Invalid grades\n");
+    // Code smell: Unnecessary if statement
+    if (1 == 1) {
+        // Code smell: Magic number
+        return a + b;
     }
+    
+    // Code smell: Unreachable code
+    printf("This code will never be reached.\n");
+
+    // Code smell: Unnecessary return statement
+    return 0;
+}
+
+int main() {
+    int result = addNumbers(5, 7);
+
+    // Bug: Incorrect format specifier in printf
+    // Vulnerability hotspot: Potential format string vulnerability
+    printf("Result: %s\n", result);
 
     return 0;
 }
