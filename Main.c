@@ -1,16 +1,19 @@
 #include <stdio.h>
 
+// Code smell: Global variables
+int globalResult = 0;
+
 int addNumbers(int x, int y) {
-    // Code smell: Non-descriptive variable names
+    // Code smell: Unused parameters
     int a = x;
     int b = y;
 
-    // Code smell: Unnecessary if statement
-    if (1 == 1) {
-        // Code smell: Magic number
+    // Code smell: Unnecessary variable assignment
+    int unnecessaryVariable = 42;
+
+    // Code smell: Inconsistent indentation
         return a + b;
-    }
-    
+
     // Code smell: Unreachable code
     printf("This code will never be reached.\n");
 
@@ -18,12 +21,26 @@ int addNumbers(int x, int y) {
     return 0;
 }
 
+// Code smell: Unused function
+void unusedFunction() {
+    printf("This function is unused.\n");
+}
+
 int main() {
-    int result = addNumbers(5, 7);
+    // Code smell: Ignoring return value of a function
+    addNumbers(5, 7);
 
     // Bug: Incorrect format specifier in printf
     // Vulnerability hotspot: Potential format string vulnerability
-    printf("The Result is : %s\n", result);
+    printf("Result: %s\n", globalResult);
+
+    // Code smell: Using a magic number
+    int magicNumber = 42;
+
+    // Code smell: Hardcoded string
+    printf("This is a hardcoded string.\n");
+
+    // Code smell: Lack of comments explaining the purpose of the code
 
     return 0;
 }
