@@ -9,7 +9,7 @@ int addNumbers(int x, int y) {
     int b = y;
 
     // Code smell: Unnecessary variable assignment
-    int unnecessaryVariable = 42;
+    //int unnecessaryVariable = 42;
 
     // Code smell: Inconsistent indentation
         return a + b;
