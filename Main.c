@@ -38,7 +38,7 @@ int main() {
     int magicNumber = 42;
 
     // Code smell: Hardcoded string
-    printf("This is a hardcoded string.\n");
+    printf("This is a hardcoded string for the purpose of sonarcloud evaluation.\n");
 
     // Code smell: Lack of comments explaining the purpose of the code
 
