@@ -23,7 +23,7 @@ int main() {
 
     // Bug: Incorrect format specifier in printf
     // Vulnerability hotspot: Potential format string vulnerability
-    printf("Result: %s\n", result);
+    printf("Result is : %s\n", result);
 
     return 0;
 }
